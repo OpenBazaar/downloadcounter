@@ -1,0 +1,23 @@
+{
+	"ImportPath": "github.com/OpenBazaar/downloadcounter",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v75",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "v1.2-208-g2a6c607",
+			"Rev": "2a6c6079c7eff49a7e9d641e109d922f124a3e4c"
+		},
+		{
+			"ImportPath": "github.com/gocraft/health",
+			"Rev": "25b40f8580168c1f905a6dba35d471cdc51ca629"
+		},
+		{
+			"ImportPath": "github.com/gocraft/health/stack",
+			"Rev": "25b40f8580168c1f905a6dba35d471cdc51ca629"
+		}
+	]
+}

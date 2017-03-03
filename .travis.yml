@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - make
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="openbazaarproject" -p="$DOCKERHUB_KEY";
+    docker push openbazaarproject/downloadcounter;
+    fi
