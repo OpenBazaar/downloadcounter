@@ -1,4 +1,7 @@
-sudo: required
+sudo: require
+language: go
+go:
+- tip
 services:
 - docker
 before_install:
