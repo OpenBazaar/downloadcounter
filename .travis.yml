@@ -1,4 +1,5 @@
 sudo: require
+language: go
 go:
 - release
 - tip
