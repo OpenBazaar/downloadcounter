@@ -2,8 +2,6 @@ sudo: require
 go:
 - release
 - tip
-script:
-- go test -v ./...
 services:
 - docker
 before_install:
