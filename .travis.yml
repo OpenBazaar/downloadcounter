@@ -1,7 +1,6 @@
 sudo: require
 language: go
 go:
-- release
 - tip
 services:
 - docker
