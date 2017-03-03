@@ -6,9 +6,7 @@ services:
 - docker
 before_install:
 - make
-after_success:
-- if [ "$TRAVIS_BRANCH" == "master" ]; then docker login -u="openbazaarproject" -p="$DOCKERHUB_KEY";
-  docker push openbazaarproject/downloadcounter; fi
+- if [ "$TRAVIS_BRANCH" == "master" ]; then make docker_hub; fi
 env:
   global:
     secure: V+GVI6Ca3m2FJiWteRA8bUxOyfV1qHPWbZtAwhcebhfRaaZ1bmhnIALpfkT2Xv1egcsolm6hVlgfb9GrHyP2WqP8ZWrnsT4dyiwx05qgziYNoBv+Pok6Nf8aUuA2PzVMqsG+2GhLfXCTzBpsPnWeDJJp0JvOKzRT2pFJ0Ik/79TByRKHASFrD1oHmsqxT3IPdMg2waHmf2NRCz9/ZJy94l6grw6bkMtGuVE3FpnoaA51BJLGCO2/UUO3+P84d5n181G4mk6qOr9GOgDb0TRhXF1qFqU4CXmITgAC1io+hzfl8HGNCuV1ilJtbaqBTQe0vPbpiuVZTR2DzFat8VkpC7D5fUfBDP4NLysuM7fVYgIevKbJRCLIPhBv7DIm3cUyY8sVes4qYCNY7rUlHQwJcA9uDsXADOg9yrZmwXk5bGk2T4NoShuovn5E9qnWl4Ll3oRJ5+BSQhYsez5JifcQftThY17q8CvEndkHvF+UXdKy3E4rM1vnLAhKrtODGCml7BuAL1MbY1M96HgOdKqTR0vXxxmA95CEakHvqjHBMHEiFkHJ9B2nUC7Udm0BC8PmF3vgCZM6/6bWetl+t/hO/4d944R7mHDIRgKwM6Hgvv5KDfnMTpaEs17szSc2ShpvG92DcbPlmDwWpC2pjp90cxJen4ot218sOANPVwFF00w=
