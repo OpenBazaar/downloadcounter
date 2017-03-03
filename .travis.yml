@@ -6,6 +6,7 @@ services:
 - docker
 before_install:
 - make
+- echo $TRAVIS_BRANCH
 - if [ "$TRAVIS_BRANCH" == "master" ]; then make docker_hub; fi
 env:
   global:
